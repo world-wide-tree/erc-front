@@ -12,8 +12,6 @@ import 'package:pwa_install/pwa_install.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   PWAInstall().setup(installCallback: () {
     debugPrint('APP INSTALLED!');
   });

@@ -1,4 +1,5 @@
 import 'package:ecr/core/utils/theme_data.dart';
+import 'package:ecr/features/presentation/screens/doctor/home_screen.dart';
 import 'package:ecr/features/presentation/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -31,6 +32,11 @@ class Routings extends StatelessWidget {
         name: 'loginScreen',
         path: '/',
         builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        name: 'doctorHomeScreen',
+        path: '/doctorHomeScreen',
+        builder: (context, state) => const DoctorHomeScreen(),
       ),
     ],
   );
