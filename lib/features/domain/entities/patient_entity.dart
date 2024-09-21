@@ -1,7 +1,9 @@
+import 'package:ERC/core/common/routes.dart';
+import 'package:ERC/features/domain/entities/ecr_entity.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecr/features/domain/entities/ecr_entity.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pluto_grid_plus/pluto_grid_plus.dart';
 
 class PatientEntity extends Equatable {
@@ -34,7 +36,7 @@ class PatientEntity extends Equatable {
     });
   }
 
-  List<PlutoColumn> getColumn() {
+  List<PlutoColumn> getColumn(BuildContext context) {
     return [
       PlutoColumn(
         enableColumnDrag: false,
@@ -50,7 +52,7 @@ class PatientEntity extends Equatable {
             return Container(
               padding: EdgeInsets.all(5),
               decoration: BoxDecoration(),
-              child: Text(rendererContext.cell.value.toString().tr()),
+              child: Text(rendererContext.cell.value.toString()),
             );
           }
           return const Text("");
@@ -67,7 +69,7 @@ class PatientEntity extends Equatable {
           if (rendererContext.cell.value != null) {
             return Container(
               padding: EdgeInsets.all(5),
-              child: Text(rendererContext.cell.value.toString().tr()),
+              child: Text(rendererContext.cell.value.toString()),
             );
           }
           return const Text("");
@@ -101,7 +103,7 @@ class PatientEntity extends Equatable {
           if (rendererContext.cell.value != null) {
             return Container(
               padding: EdgeInsets.all(5),
-              child: Text(rendererContext.cell.value.toString().tr()),
+              child: Text(rendererContext.cell.value.toString()),
             );
           }
           return const Text("");
@@ -118,7 +120,7 @@ class PatientEntity extends Equatable {
           if (rendererContext.cell.value != null) {
             return Container(
               padding: EdgeInsets.all(5),
-              child: Text(rendererContext.cell.value.toString().tr()),
+              child: Text(rendererContext.cell.value.toString()),
             );
           }
           return const Text("");
@@ -139,7 +141,9 @@ class PatientEntity extends Equatable {
               padding: EdgeInsets.all(5),
               decoration: BoxDecoration(),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.go(Routes.aboutPatientScreen);
+                },
                 child: Text(
                   'more'.tr(),
                 ),

@@ -1,5 +1,5 @@
 class ApiConstants {
-  static const baseApiUrl = "https://api.recardio.uz/";
+  static const baseApiUrl = "https://api.erc.uz/";
   static const currentUser = 'users/me/';
   static const updateCurrentUser = 'users/me/';
   static const token = 'api/token/refresh/';

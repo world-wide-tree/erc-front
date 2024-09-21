@@ -1,6 +1,6 @@
+import 'package:ERC/core/common/app_colors.dart';
+import 'package:ERC/core/common/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecr/core/common/app_colors.dart';
-import 'package:ecr/core/common/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -31,8 +31,6 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
 
   static List<String> routes = [
     Routes.mainScreen,
-    Routes.toDoScreen,
-    Routes.accountScreen,
   ];
 
   static List<BottomNavigationBarItem> tabs = [

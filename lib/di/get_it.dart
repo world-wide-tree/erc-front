@@ -1,6 +1,6 @@
-import 'package:ecr/core/api/api_client.dart';
-import 'package:ecr/features/data/datasource/authentication_local_data_source.dart';
-import 'package:ecr/features/data/datasource/authentication_remote_data_source.dart';
+import 'package:ERC/core/api/api_client.dart';
+import 'package:ERC/features/data/datasource/authentication_local_data_source.dart';
+import 'package:ERC/features/data/datasource/authentication_remote_data_source.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
 

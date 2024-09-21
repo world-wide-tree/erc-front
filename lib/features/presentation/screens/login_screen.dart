@@ -1,5 +1,5 @@
+import 'package:ERC/core/utils/path_constants.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecr/core/utils/path_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
@@ -43,7 +43,10 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('who_are_you'.tr()),
+                  Text(
+                    'who_are_you'.tr(),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  ),
                   SizedBox(
                     height: 30,
                   ),
@@ -69,7 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 10,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.go('/patientHomeScreen');
+                    },
                     child: Text(
                       'patient'.tr(),
                     ),

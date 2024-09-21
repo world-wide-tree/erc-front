@@ -1,5 +1,5 @@
+import 'package:ERC/features/domain/entities/patient_entity.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecr/features/domain/entities/patient_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pluto_grid_plus/pluto_grid_plus.dart';
@@ -33,7 +33,7 @@ class _TableWidgetState extends State<PatientsDataPlutoTable> {
           .toList()
           .reversed
           .toList();
-      columns = listData.first.getColumn().toList();
+      columns = listData.first.getColumn(context).toList();
     }
   }
 

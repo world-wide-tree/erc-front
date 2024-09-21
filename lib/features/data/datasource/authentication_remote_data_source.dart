@@ -1,5 +1,5 @@
-import 'package:ecr/core/api/api_client.dart';
-import 'package:ecr/features/data/models/request_token_model.dart';
+import 'package:ERC/core/api/api_client.dart';
+import 'package:ERC/features/data/models/request_token_model.dart';
 
 abstract class AuthenticationRemoteDataSource {
   Future<RequestTokenModel> validateWithLogin(Map<String, dynamic> requestBody);

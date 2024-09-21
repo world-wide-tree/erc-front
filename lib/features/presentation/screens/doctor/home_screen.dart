@@ -1,7 +1,7 @@
+import 'package:ERC/core/widgets/patient_data_table_widget.dart';
+import 'package:ERC/features/domain/entities/ecr_entity.dart';
+import 'package:ERC/features/domain/entities/patient_entity.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:ecr/core/widgets/patient_data_table_widget.dart';
-import 'package:ecr/features/domain/entities/ecr_entity.dart';
-import 'package:ecr/features/domain/entities/patient_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -65,6 +65,9 @@ class _DoctorHomeScreenState extends State<DoctorHomeScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              width: 20,
+            )
           ],
         ),
         body: PatientsDataPlutoTable(listData: patients));
