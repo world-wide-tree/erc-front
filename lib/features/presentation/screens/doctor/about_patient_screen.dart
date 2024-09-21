@@ -31,11 +31,12 @@ class _AboutPatientScreenState extends State<AboutPatientScreen> {
               height: 10,
             ),
             PhotoTextWidget(
-                text: '',
-                date: "2024/02/12",
-                title: 'ekg',
-                urlPhoto:
-                    'https://thoracickey.com/wp-content/uploads/2016/12/image00970-1.jpeg')
+              text: '',
+              date: "2024/02/12",
+              title: 'ekg',
+              urlPhoto:
+                  'https://thoracickey.com/wp-content/uploads/2016/12/image00970-1.jpeg',
+            )
           ],
         ),
       ),
