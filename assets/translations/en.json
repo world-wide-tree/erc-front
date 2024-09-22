@@ -1,3 +1,22 @@
 {
-    "hi" : "hi"
+    "name": "Name",
+    "age": "Age",
+    "sex": "Sex",
+    "phone_nuber": "Phone Number",
+    "address": "Address",
+    "more": "More",
+    "male": "Male",
+    "female": "Female",
+    "add_patient": "Add Patient",
+    "add": "Add",
+    "who_are_you": "Who are you",
+    "cardio": "Cardiology",
+    "lor": "ENT (Ear, Nose, Throat)",
+    "oftalmolog": "Ophthalmology",
+    "stomatolog": "Dentistry",
+    "hirurg": "Surgery",
+    "travmotolog": "Traumatology",
+    "pediatr": "Pediatrics",
+    "doctor": "Doctor",
+    "patient": "Patient"
 }

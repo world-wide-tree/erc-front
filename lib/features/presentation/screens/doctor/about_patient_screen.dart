@@ -1,6 +1,8 @@
+import 'package:ERC/core/common/routes.dart';
 import 'package:ERC/core/widgets/medicin_text.dart';
 import 'package:ERC/core/widgets/photo_with_text.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AboutPatientScreen extends StatefulWidget {
   const AboutPatientScreen({super.key});
@@ -16,7 +18,9 @@ class _AboutPatientScreenState extends State<AboutPatientScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.chevron_left),
-          onPressed: () {},
+          onPressed: () {
+            context.go(Routes.doctorHomeScreen);
+          },
         ),
       ),
       body: Padding(
@@ -35,7 +39,7 @@ class _AboutPatientScreenState extends State<AboutPatientScreen> {
               date: "2024/02/12",
               title: 'ekg',
               urlPhoto:
-                  'https://thoracickey.com/wp-content/uploads/2016/12/image00970-1.jpeg',
+                  'https://www.e-cardiogram.com/wp-content/uploads/2019/11/ECG-normal-femme-28-ans-taboulet-Nv1a6-1200x900.jpg',
             )
           ],
         ),

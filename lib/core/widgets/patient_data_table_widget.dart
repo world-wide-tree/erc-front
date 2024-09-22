@@ -100,7 +100,7 @@ class _TableWidgetState extends State<PatientsDataPlutoTable> {
           loadingText: 'loadingText'.tr(),
         ),
         columnSize: PlutoGridColumnSizeConfig(
-          autoSizeMode: PlutoAutoSizeMode.none,
+          autoSizeMode: PlutoAutoSizeMode.scale,
           resizeMode: PlutoResizeMode.none,
         ),
       ),

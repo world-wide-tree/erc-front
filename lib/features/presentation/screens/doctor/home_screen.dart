@@ -1,8 +1,10 @@
+import 'package:ERC/core/common/routes.dart';
 import 'package:ERC/core/widgets/patient_data_table_widget.dart';
 import 'package:ERC/features/domain/entities/ecr_entity.dart';
 import 'package:ERC/features/domain/entities/patient_entity.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DoctorHomeScreen extends StatefulWidget {
   const DoctorHomeScreen({super.key});
@@ -24,14 +26,24 @@ class _DoctorHomeScreenState extends State<DoctorHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: Align(alignment: Alignment.center, child: Text('ERC')),
+          leading: Align(
+              alignment: Alignment.center,
+              child: Text(
+                'ERC',
+                style: TextStyle(
+                  color: Colors.blue[200],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              )),
           actions: [
             SizedBox(
               width: 70,
             ),
             Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                style: TextStyle(fontSize: 12),
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.search),
                   constraints: BoxConstraints(
@@ -46,7 +58,59 @@ class _DoctorHomeScreenState extends State<DoctorHomeScreen> {
             ),
             Spacer(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      width: 300,
+                      height: 200,
+                      child: Dialog(
+                        child: Container(
+                          width: 300,
+                          height: 200,
+                          child: Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  TextFormField(
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        patients.add(PatientEntity(
+                                            id: '',
+                                            name: "Axror",
+                                            age: "24",
+                                            pol: "male",
+                                            ecr: EcrEntity(id: '1')));
+                                      });
+                                      Navigator.of(context, rootNavigator: true)
+                                          .pop();
+                                    },
+                                    child: Text(
+                                      'add'.tr(),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
               child: Text(
                 'add_patient'.tr(),
               ),
@@ -66,7 +130,15 @@ class _DoctorHomeScreenState extends State<DoctorHomeScreen> {
             ),
             SizedBox(
               width: 20,
-            )
+            ),
+            IconButton(
+                onPressed: () {
+                  context.go(Routes.loginScreen);
+                },
+                icon: Icon(
+                  Icons.logout,
+                  color: Colors.red,
+                ))
           ],
         ),
         body: PatientsDataPlutoTable(listData: patients));

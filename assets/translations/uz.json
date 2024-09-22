@@ -1,3 +1,22 @@
 {
-    "hi" : "salom"
+    "name": "Ism",
+    "age": "Yosh",
+    "sex": "Jinsi",
+    "phone_nuber": "Telefon raqami",
+    "address": "Manzil",
+    "more": "Batafsil",
+    "male": "Erkak",
+    "female": "Ayol",
+    "add_patient": "Bemor qo'shish",
+    "add": "Qo'shish",
+    "who_are_you": "Siz kimsiz",
+    "cardio": "Kardiologiya",
+    "lor": "LOR (Quloq, Burun, Tomoq)",
+    "oftalmolog": "Oftalmologiya",
+    "stomatolog": "Stomatologiya",
+    "hirurg": "Jarrohlik",
+    "travmotolog": "Travmatologiya",
+    "pediatr": "Pediatriya",
+    "doctor": "Shifokor",
+    "patient": "Bemor"
 }
