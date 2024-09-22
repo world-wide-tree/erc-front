@@ -1,16 +1,26 @@
-# ecr
+# ECR
 
-A new Flutter project.
+A platform for digitalization of medical cards
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+The application is designed for both patients and medical institutions
 
-A few resources to get you started if this is your first Flutter project:
+// for doctors
+ - Log in to the web application that is designed for doctors to monitor the health of your patients and quickly find the necessary information from their medical records
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ - On the main page you will see a list of patients, a search engine for quickly finding the right patient, as well as a button for adding a new patient
+ - After clicking on the "more" button, you can view the patient's medical record in detail
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+// for patients
+ -   Log in to the mobile app as a patient to see your entire medical history in more detail right on your mobile
+   
+ -   On the main page you will see your electronic card which is sorted and divided into several tabs based on the directions in medicine
+ -   Easily view all prescriptions and medical tests directly from your mobile app
+
+// in future
+-  Interaction with the unified State Register of Uzbekistan OneID
+-  An appointment to a polyclinic or to any clinic in one click of the mobile application
+-  Online consultation with leading medical specialists
+-  Introduction of artificial intelligence for automatic digitization of medical records
+-  And many other interesting things
